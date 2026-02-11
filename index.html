@@ -12,6 +12,14 @@
 		}
 	</style>
 	<link rel="dns-prefetch" href="//www.googletagmanager.com">
+	<!-- Global site tag (gtag.js) - Google Ads -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17904893624"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'AW-17904893624');
+	</script>
 	<link rel="alternate" type="application/rss+xml" title="trendingsupplements-reviews.com  Feed"
 		href="https://trendingsupplements-reviews.com/feed/">
 	<link rel="alternate" type="application/rss+xml" title="trendingsupplements-reviews.com  Comments Feed"
@@ -3382,6 +3390,40 @@
 	</script>
 	<script src="js/player-static.js" type="module" defer=""></script>
 
+	<!-- Success Modal -->
+	<div id="successModal"
+		style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+		<div
+			style="background-color:#fefefe; margin:auto; padding:20px; border:1px solid #888; width:90%; max-width:500px; border-radius:10px; text-align:center; position: relative; top: 50%; transform: translateY(-50%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+			<h2 style="color:#28a745; margin-bottom:15px;">¡Pedido Confirmado!</h2>
+			<p style="font-size:16px; color:#333; margin-bottom:20px;">
+				Gracias. Un operador se pondrá en contacto pronto.
+			</p>
+			<button onclick="document.getElementById('successModal').style.display='none'"
+				style="background-color:#28a745; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-size:16px; font-weight:bold;">
+				OK
+			</button>
+		</div>
+	</div>
+	<script>
+		window.addEventListener('DOMContentLoaded', function () {
+			var urlParams = new URLSearchParams(window.location.search);
+			if (urlParams.get('status') === 'success') {
+				var modal = document.getElementById('successModal');
+				if (modal) modal.style.display = 'flex';
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17904893624/zM4MCKSBze8bELj929lC',
+						'value': 19,
+						'currency': 'USD',
+						'transaction_id': Date.now()
+					});
+				}
+			}
+		});
+	</script>
+	<script src="js/simple-submit.js"></script>
 </body>
 
 </html>
